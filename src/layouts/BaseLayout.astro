@@ -1,0 +1,82 @@
+---
+import '../styles/global.css';
+const { title = 'Astropovos', description = 'Asterismos do céu brasileiro', home = false } = Astro.props;
+const base = Astro.site?.pathname ? '/astropovos' : '/astropovos';
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <title>{title} — Astropovos</title>
+    <script is:inline>
+      (() => {
+        try {
+          const saved = localStorage.getItem('astropovos-theme');
+          const theme = saved === 'light' || saved === 'dark' ? saved : (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+          document.documentElement.dataset.theme = theme;
+        } catch { document.documentElement.dataset.theme = 'dark'; }
+      })();
+    </script>
+  </head>
+  <body class:list={{ 'home-body': home }}>
+    <div class="site-shell">
+      <div class="container">
+        <header class="site-header">
+          <a class="brand" href={`${base}/`}>ASTROPOVOS</a>
+          <div class="header-actions">
+            {!home && <button class="theme-toggle" type="button" data-theme-toggle aria-label="Ativar modo claro" title="Ativar modo claro">☼ Claro</button>}
+          <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-navigation"><span></span><span></span><span></span></button>
+          </div>
+        </header>
+        <nav id="site-navigation" class="site-nav" aria-label="Navegação principal" data-open="false">
+          <a href={`${base}/asterismos/`}>Asterismos</a>
+          <a href={`${base}/o-que-sao-asterismos/`}>O que são asterismos?</a>
+          <a href={`${base}/nosso-proposito/`}>Nosso propósito</a>
+          <a href={`${base}/sobre-nos/`}>Sobre nós</a>
+          <a href={`${base}/sobre-o-site/`}>Sobre o site</a>
+          <a href={`${base}/fontes/`}>Fontes</a>
+          <a href={`${base}/creditos/`}>Créditos</a>
+          <a href={`${base}/professores/`}>Para professores <span class="tag">Em breve</span></a>
+        </nav>
+        <main><slot /></main>
+        <footer class="site-footer"><strong>Astropovos</strong> · Yaci Farias (autora) · Eric Brasil (desenvolvedor) · Textos, imagens e SVGs: CC BY-NC 4.0 · Código: PolyForm Noncommercial 1.0.0.</footer>
+      </div>
+    </div>
+    <script>
+      const button = document.querySelector('.menu-button');
+      const nav = document.querySelector('#site-navigation');
+      const menu = nav instanceof HTMLElement ? nav : null;
+      button?.addEventListener('click', () => {
+        const open = menu?.dataset.open !== 'true';
+        if (menu) menu.dataset.open = String(open);
+        button?.setAttribute('aria-expanded', String(open));
+      });
+
+      const invite = document.querySelector('#asterism-invite');
+      const inviteOpen = document.querySelector('[data-open-invite]');
+      const inviteClose = document.querySelector('[data-close-invite]');
+      if (invite instanceof HTMLDialogElement) {
+        inviteOpen?.addEventListener('click', () => invite.showModal());
+        inviteClose?.addEventListener('click', () => invite.close());
+      }
+
+      const themeToggle = document.querySelector('[data-theme-toggle]');
+      const setTheme = (theme: 'light' | 'dark') => {
+        document.documentElement.dataset.theme = theme;
+        localStorage.setItem('astropovos-theme', theme);
+        themeToggle?.setAttribute('aria-label', theme === 'dark' ? 'Ativar modo claro' : 'Ativar modo escuro');
+        if (themeToggle) themeToggle.textContent = theme === 'dark' ? '☼ Claro' : '☾ Escuro';
+      };
+      if (themeToggle instanceof HTMLButtonElement) {
+        let current: 'light' | 'dark' = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+        setTheme(current);
+        themeToggle.addEventListener('click', () => {
+          current = current === 'dark' ? 'light' : 'dark';
+          setTheme(current);
+        });
+      }
+    </script>
+  </body>
+</html>

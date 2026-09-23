@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Início" description="Astropovos — asterismos do céu brasileiro" home>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Um céu, muitas leituras</p>
+      <h1>Astropovos</h1>
+      <p>Um espaço para conhecer asterismos do céu brasileiro a partir de conhecimentos, narrativas e referências de povos originários.</p>
+      <p><button class="tag hero-cta" type="button" data-open-invite>Asterismos</button></p>
+    </div>
+  </section>
+  <dialog id="asterism-invite" class="intro-dialog" aria-labelledby="invite-title">
+    <button class="dialog-close" type="button" aria-label="Fechar convite" data-close-invite>×</button>
+    <p class="eyebrow">Um convite para olhar de novo</p>
+    <h2 id="invite-title">Explore os asterismos</h2>
+    <p>Convidamos você a explorar a imensidão do céu brasileiro sob uma perspectiva completamente nova e enriquecedora: a visão ancestral dos povos originários do nosso país, cujos saberes tradicionais trazem um olhar profundo e cheio de significado sobre os astros.</p>
+    <a class="tag" href="/astropovos/asterismos/">Explore os Asterismos</a>
+  </dialog>
+</BaseLayout>

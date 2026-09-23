@@ -1,0 +1,300 @@
+{
+  "version": "0.1.0",
+  "status": "reconstrucoes_preliminares_para_revisao_com_yaci",
+  "catalog": {
+    "name": "Hipparcos Main Catalogue",
+    "vizier_id": "I/239/hip_main",
+    "file": "materials/sources/catalogs/hipparcos-vmag-lt7.tsv",
+    "coordinate_frame": "ICRS",
+    "epoch": "J1991.25",
+    "query_date": "2026-09-21",
+    "magnitude_limit": 7.0
+  },
+  "skycultures": {
+    "repository": "https://github.com/Stellarium/stellarium-skycultures",
+    "commit": "014fbb5e59233d133c22f9811af96b67d05a95c9",
+    "tupi": {
+      "classification": "ethnographic",
+      "local_index": "materials/sources/stellarium-skycultures/tupi/index.json",
+      "local_description": "materials/sources/stellarium-skycultures/tupi/description.md",
+      "license": "GNU GPL v2.0",
+      "caveat": "Contribuição de usuário baseada principalmente em Germano Afonso; usar como implementação técnica, não como autoridade cultural isolada."
+    },
+    "tukano": {
+      "classification": "ethnographic",
+      "local_index": "materials/sources/stellarium-skycultures/tukano/index.json",
+      "local_description": "materials/sources/stellarium-skycultures/tukano/description.md",
+      "license": "CC BY-SA",
+      "caveat": "Mapeamento derivado da pesquisa de campo de Walmir Thomazi Cardoso, 2005–2007, com estudantes, conhecedores e narradores Tukano/Desana/Tuyuka do médio Tiquié."
+    }
+  },
+  "items": [
+    {
+      "slug": "cervo",
+      "title": "Cervo / Veado",
+      "cultural_context": "Reconstrução contemporânea associada principalmente aos Guarani do Sul do Brasil.",
+      "mode": "skyculture_lines",
+      "clean_visual": true,
+      "interactive_hips": [
+        60718,
+        62434,
+        61084,
+        45238,
+        39953,
+        42913,
+        45556,
+        44816
+      ],
+      "star_names": {
+        "60718": "Acrux",
+        "45238": "Miaplacidus",
+        "39953": "Suhail Al Muhlif",
+        "45556": "Aspidiske",
+        "44816": "Alsuhail"
+      },
+      "skyculture": "tupi",
+      "constellation_id": "CON tupi 004",
+      "native_name": null,
+      "center_ra": 156.6,
+      "span_ra": 88.0,
+      "dec_min": -80.0,
+      "dec_max": -30.0,
+      "notes": [
+        "O mapa do Stellarium fornece 41 estrelas e linhas técnicas para o Veado.",
+        "A Falsa Cruz deve ser descrita como asterismo ocidental de Carina/Vela, não constelação IAU.",
+        "A menção ao Norte nas fontes descreve diferença sazonal/latitude, não atribuição étnica específica."
+      ],
+      "sources": [
+        "Afonso — As constelações indígenas brasileiras",
+        "Stellarium skyculture Tupi-Guarani"
+      ]
+    },
+    {
+      "slug": "onca",
+      "title": "Onça — Yai",
+      "cultural_context": "Tradição Tukano do médio Tiquié; não confundir com a Onça Ai dos Ticuna no Escorpião.",
+      "mode": "skyculture_lines",
+      "skyculture": "tukano",
+      "constellation_id": "CON tukano 005",
+      "native_name": "Yai",
+      "center_ra": 32.9,
+      "span_ra": 82.0,
+      "dec_min": 40.0,
+      "dec_max": 74.0,
+      "notes": [
+        "A representação cobre Cepheus, Cassiopeia e Perseus no arquivo técnico do Stellarium.",
+        "As cinco partes nomeadas da Yai não foram atribuídas estrela a estrela nas fontes públicas consultadas.",
+        "A Onça Ticuna Ai, situada no Escorpião e ligada à estiagem, é uma figura distinta e não foi fundida aqui."
+      ],
+      "sources": [
+        "Cardoso — O céu dos Tukano",
+        "ISA — Astronomia Tukano",
+        "Stellarium skyculture Tukano"
+      ],
+      "clean_visual": true
+    },
+    {
+      "slug": "tapii-anta",
+      "title": "Tapi’i — Anta do Norte",
+      "cultural_context": "Reconstrução contemporânea Guarani na Via Láctea setentrional.",
+      "mode": "skyculture_lines",
+      "skyculture": "tupi",
+      "constellation_id": "CON tupi 003",
+      "native_name": "Tapi’i",
+      "star_names": {
+        "102098": "Deneb",
+        "3179": "Schedar",
+        "746": "Caph",
+        "105199": "Alderamin",
+        "6686": "Ruchbah"
+      },
+      "center_ra": 341.4,
+      "span_ra": 86.0,
+      "dec_min": 32.0,
+      "dec_max": 72.0,
+      "notes": [
+        "Deneb (α Cygni) é documentada como focinho na reconstrução de Germano Afonso.",
+        "A figura atravessa Cygnus, Cepheus, Cassiopeia, Andromeda e Lacerta.",
+        "Não confundir a Anta do Norte com Tapi’i rainhykã, a Queixada da Anta nas Híades."
+      ],
+      "sources": [
+        "Afonso — As constelações indígenas brasileiras",
+        "Stellarium skyculture Tupi-Guarani"
+      ],
+      "clean_visual": true
+    },
+    {
+      "slug": "ema",
+      "title": "Ema — Guirá Nhandu",
+      "cultural_context": "Registro Tupinambá histórico e reconstruções Guarani contemporâneas; figura também conhecida em outros povos.",
+      "mode": "skyculture_lines",
+      "skyculture": "tupi",
+      "constellation_id": "CON tupi 001",
+      "native_name": "Guirá Nhandu",
+      "star_names": {
+        "60718": "Acrux",
+        "80763": "Antares",
+        "85927": "Shaula"
+      },
+      "center_ra": 242.8,
+      "span_ra": 120.0,
+      "dec_min": -76.0,
+      "dec_max": -12.0,
+      "notes": [
+        "A Ema é principalmente uma constelação escura formada por manchas da Via Láctea; as linhas estelares são insuficientes para representá-la plenamente.",
+        "O Saco de Carvão integra a cabeça; estrelas de Musca formam o bico e ovos em reconstruções de Afonso.",
+        "A silhueta final deverá incorporar a textura da Via Láctea após revisão com Yaci."
+      ],
+      "sources": [
+        "D’Abbeville via Lima e Moreira",
+        "Afonso — As constelações indígenas brasileiras",
+        "Stellarium skyculture Tupi-Guarani"
+      ],
+      "clean_visual": true
+    },
+    {
+      "slug": "garca",
+      "title": "Garça — Yhé",
+      "cultural_context": "Mapeamento Tukano/Desana do médio Tiquié; narrativas Barasana devem ser atribuídas separadamente.",
+      "mode": "skyculture_lines",
+      "skyculture": "tukano",
+      "constellation_id": "CON tukano 009",
+      "native_name": "Yhé",
+      "center_ra": 188.2,
+      "span_ra": 26.0,
+      "dec_min": 10.0,
+      "dec_max": 34.0,
+      "notes": [
+        "O Stellarium registra 20 estrelas na região de Cabeleira de Berenice.",
+        "A própria fonte técnica registra discussão entre Cabeleira de Berenice e Corvo e adota a primeira com base nos Tukano de São José II.",
+        "Pamuri mahsã não deve ser apresentado como nome de uma etnia."
+      ],
+      "sources": [
+        "Cardoso — O céu dos Tukano",
+        "Diakara — fonte Desana",
+        "Stellarium skyculture Tukano"
+      ],
+      "clean_visual": true
+    },
+    {
+      "slug": "cobra-jararaca",
+      "title": "Jararaca — Aña",
+      "cultural_context": "Constelação segmentada Tukano do médio Tiquié.",
+      "mode": "skyculture_lines",
+      "skyculture": "tukano",
+      "constellation_id": "CON tukano 001",
+      "native_name": "Aña",
+      "center_ra": 271.3,
+      "span_ra": 72.0,
+      "dec_min": -50.0,
+      "dec_max": -13.0,
+      "notes": [
+        "A configuração atravessa Scorpius, Sagittarius e Corona Australis.",
+        "Cardoso associa Antares à bolsa de veneno; o artigo-base a chama de cabeça. A divergência permanece aberta.",
+        "Mboi não deve ser usado como termo Tukano; Aña é a forma documentada neste contexto."
+      ],
+      "sources": [
+        "Cardoso — O céu dos Tukano",
+        "ISA — Astronomia Tukano",
+        "Stellarium skyculture Tukano"
+      ],
+      "clean_visual": true
+    },
+    {
+      "slug": "homem-velho",
+      "title": "Homem Velho — Tuivaé / Tuya",
+      "cultural_context": "Registro Tupinambá histórico e reconstrução contemporânea associada aos Guarani.",
+      "mode": "skyculture_lines",
+      "skyculture": "tupi",
+      "constellation_id": "CON tupi 002",
+      "native_name": "Tuivaé / Tuya",
+      "star_names": {
+        "24436": "Rigel",
+        "27989": "Betelgeuse",
+        "21421": "Aldebaran",
+        "25336": "Bellatrix",
+        "26311": "Alnilam",
+        "26727": "Alnitak",
+        "27366": "Saiph",
+        "25930": "Mintaka"
+      },
+      "center_ra": 73.0,
+      "span_ra": 40.0,
+      "dec_min": -14.0,
+      "dec_max": 29.0,
+      "notes": [
+        "O registro histórico descreve um homem velho segurando um bastão; a lista estrela por estrela vem da reconstrução contemporânea de Afonso.",
+        "A figura reúne regiões de Touro e Órion e contém Plêiades, Híades e Cinturão de Órion.",
+        "Seu aparecimento completo na segunda quinzena de dezembro marca verão no Sul e chuvas no Norte nas fontes consultadas."
+      ],
+      "sources": [
+        "D’Abbeville via Lima e Moreira",
+        "Afonso — As constelações indígenas brasileiras",
+        "Stellarium skyculture Tupi-Guarani"
+      ],
+      "clean_visual": true
+    },
+    {
+      "slug": "vespeiro-colmeia",
+      "title": "Vespeiro / Colmeia — Seichu / Eixu",
+      "cultural_context": "Registro Tupinambá histórico (Seichu) e tradições Guarani contemporâneas (Eixu), apresentados separadamente.",
+      "mode": "points_only",
+      "skyculture": "tupi",
+      "constellation_id": "CON tupi 006",
+      "native_name": "Seichu / Eixu",
+      "center_ra": 56.65,
+      "span_ra": 8.0,
+      "dec_min": 20.0,
+      "dec_max": 28.0,
+      "notes": [
+        "A figura é o próprio aglomerado das Plêiades (M45); nenhuma linha de animal será inventada.",
+        "D’Abbeville registra nove estrelas em forma de grelha; sínteses Guarani usam sete estrelas visíveis. As contagens permanecem separadas.",
+        "As Plêiades integram também a figura maior do Homem Velho em tradições Guarani."
+      ],
+      "sources": [
+        "D’Abbeville via Lima e Moreira",
+        "Afonso — As constelações indígenas brasileiras",
+        "Stellarium skyculture Tupi-Guarani"
+      ],
+      "clean_visual": true
+    },
+    {
+      "slug": "canoa-tembe",
+      "title": "Canoa Tembé",
+      "cultural_context": "Canoa documentada entre os Tembé; esta carta mostra somente a configuração da Canoa.",
+      "mode": "documented_lines",
+      "native_name": null,
+      "primary_lines": [
+        [
+          58001,
+          59774,
+          62956,
+          65378,
+          67301
+        ]
+      ],
+      "extension_lines": [],
+      "star_names": {
+        "58001": "Phecda",
+        "59774": "Megrez",
+        "62956": "Alioth",
+        "63125": "Cor Caroli",
+        "65378": "Mizar",
+        "67301": "Alkaid"
+      },
+      "center_ra": 192.7,
+      "span_ra": 36.0,
+      "dec_min": 35.0,
+      "dec_max": 61.0,
+      "notes": [
+        "Linha verde: Canoa Tembé, formada por Phecda, Megrez, Alioth, Mizar e Alkaid.",
+        "A Canoa indica o norte quando aparece paralela ao horizonte, segundo a descrição de Afonso.",
+        "A extensão Barco de Vigia permanece documentada no dossiê, mas não integra esta carta."
+      ],
+      "sources": [
+        "Afonso — Etnoastronomia afro-indígena-brasileira, relato de pesquisa de 1999"
+      ],
+      "clean_visual": true
+    }
+  ]
+}
