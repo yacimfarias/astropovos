@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { asterismos } from '../../data/asterismos';
+---
+<BaseLayout title="Asterismos" description="Seleção de asterismos do Astropovos">
+  <section>
+    <p class="eyebrow">Asterismos do projeto</p>
+    <div class="section-heading"><h1>Asterismos</h1><span class="meta">{asterismos.length} cartas</span></div>
+    <div class="grid">
+      {asterismos.map((item) => (
+        <a class="card" href={`/astropovos/asterismos/${item.slug}/`}>
+          <img src={`/astropovos/${item.arquivo_reconstrucao}`} alt={`Carta celeste: ${item.nome}`} loading="lazy" />
+          <div class="card-body"><h2>{item.nome}</h2><p>{item.povos_associados?.[0]}</p></div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

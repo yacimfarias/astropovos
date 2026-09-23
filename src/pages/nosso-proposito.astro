@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { menuContent } from '../data/content';
+---
+<BaseLayout title="Nosso propósito" description="Propósito do projeto Astropovos">
+  <section class="panel page-copy"><p class="eyebrow">Propósito</p><h1>{menuContent.proposito.title}</h1>{menuContent.proposito.paragraphs.map((paragraph) => <p>{paragraph}</p>)}</section>
+</BaseLayout>

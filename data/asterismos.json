@@ -1,0 +1,520 @@
+{
+  "$schema": "../docs/estrutura-de-dados.md",
+  "versao": "0.1.0",
+  "status": "nove_reconstrucoes_v0.1_aguardam_revisao_com_yaci",
+  "observacao": "Conteúdo preliminar para auditoria. Não publicar como versão final sem revisão das fontes, da equipe e dos direitos.",
+  "asterismos": [
+    {
+      "slug": "cervo",
+      "nome": "Cervo",
+      "variantes": [
+        "Veado",
+        "Cervo do Pantanal"
+      ],
+      "povos_associados": [
+        "Guarani — atribuição principal nas fontes consultadas"
+      ],
+      "regioes": [
+        "Sul do Brasil; diferenças sazonais também são descritas para observadores no Norte"
+      ],
+      "idiomas": [
+        "Guarani; nome indígena específico ainda não validado"
+      ],
+      "descricao_cultural": "A configuração do Cervo ou Veado marca o equinócio de outono e a passagem do calor para o frio no Sul, início do chamado Tempo Velho. A referência ao Norte nas fontes descreve diferença sazonal e de latitude, não um povo específico.",
+      "relacao_sazonal": "Equinócio de outono; transição entre calor e frio no Sul; transição entre seca e chuva no Norte.",
+      "regiao_astronomica_ocidental": [
+        "Cruzeiro do Sul",
+        "Falsa Cruz",
+        "Carina",
+        "Vela",
+        "Centaurus"
+      ],
+      "estrelas": [],
+      "linhas": [],
+      "tipo_de_representacao": "skyculture_etnografica_reconstrucao_contemporanea",
+      "status_revisao": "aguarda_revisao_com_yaci",
+      "fontes": [
+        "F-ASTROPOVOS",
+        "F-RECIMA21",
+        "F-AFONSO-2009",
+        "F-AFONSO-2013",
+        "F-LIMA-MOREIRA-2005"
+      ],
+      "notas_de_auditoria": "A Falsa Cruz é asterismo ocidental de Vela/Carina, não constelação IAU. A carta usa linhas técnicas do skyculture Tupi-Guarani do Stellarium, baseadas em Afonso.",
+      "versao_reconstrucao": "cervo-v0.1",
+      "arquivo_reconstrucao": "assets/reconstructions/cervo/cervo-v0.1.svg",
+      "configuracao_reconstrucao": "data/reconstructions/asterismos-v0.1.json"
+    },
+    {
+      "slug": "onca",
+      "nome": "Onça",
+      "variantes": [
+        "Yai"
+      ],
+      "povos_associados": [
+        "Tukano — Yai representada nesta entrada"
+      ],
+      "regioes": [
+        "Médio Tiquié / Alto Rio Negro"
+      ],
+      "idiomas": [
+        "Tukano"
+      ],
+      "descricao_cultural": "A Yai Tukano é uma grande configuração setentrional e segmentada em estrela que ilumina, cabeça, bigode, corpo e rabo. Não deve ser fundida com a Onça Ai dos Ticuna, situada no Escorpião e associada à estiagem.",
+      "relacao_sazonal": "O ocaso do corpo da Yai ocorre na segunda quinzena de março nas fontes Tukano consultadas.",
+      "regiao_astronomica_ocidental": [
+        "Cepheus",
+        "Cassiopeia",
+        "Andrômeda",
+        "Perseu"
+      ],
+      "estrelas": [],
+      "linhas": [],
+      "tipo_de_representacao": "skyculture_etnografica_tukano",
+      "status_revisao": "aguarda_revisao_com_yaci",
+      "fontes": [
+        "F-ASTROPOVOS",
+        "F-RECIMA21",
+        "F-FAULHABER-2004",
+        "F-SAUNDERS-1998"
+      ],
+      "notas_de_auditoria": "O artigo-base funde indevidamente tradições Tukano e Ticuna. A v0.1 representa apenas a Yai Tukano com linhas do skyculture etnográfico de Cardoso/Stellarium.",
+      "versao_reconstrucao": "onca-v0.1",
+      "arquivo_reconstrucao": "assets/reconstructions/onca/onca-v0.1.svg",
+      "configuracao_reconstrucao": "data/reconstructions/asterismos-v0.1.json"
+    },
+    {
+      "slug": "tapii-anta",
+      "nome": "Tapi’i (Anta)",
+      "variantes": [
+        "Anta do Norte",
+        "Caminho das Antas"
+      ],
+      "povos_associados": [
+        "Guarani — reconstrução contemporânea"
+      ],
+      "regioes": [
+        "Norte do Brasil",
+        "Sul do Brasil"
+      ],
+      "idiomas": [
+        "Tupi-Guarani, conforme a grafia apresentada na fonte"
+      ],
+      "descricao_cultural": "A Anta percorre uma extensa região da Via Láctea, entendida como Caminho das Antas. No Norte, seu aparecimento é relacionado à chegada da primavera e à transição entre seca e chuva. No Sul, sua observação é difícil por ficar próxima ao horizonte.",
+      "relacao_sazonal": "Primavera e transição entre seca e chuva no Norte; transição entre frio e calor no Sul, segundo a fonte secundária.",
+      "regiao_astronomica_ocidental": [
+        "Via Láctea",
+        "Cygnus",
+        "Cepheus",
+        "Cassiopeia",
+        "Andrômeda",
+        "Lacerta"
+      ],
+      "estrelas": [],
+      "linhas": [],
+      "tipo_de_representacao": "skyculture_reconstrucao_contemporanea",
+      "status_revisao": "aguarda_revisao_com_yaci",
+      "fontes": [
+        "F-ASTROPOVOS",
+        "F-RECIMA21",
+        "F-AFONSO-2013",
+        "F-LIMA-MOREIRA-2005"
+      ],
+      "notas_de_auditoria": "Deneb é documentada como focinho. Não confundir a Anta do Norte com Tapi’i rainhykã, a Queixada da Anta nas Híades.",
+      "versao_reconstrucao": "tapii-anta-v0.1",
+      "arquivo_reconstrucao": "assets/reconstructions/tapii-anta/tapii-anta-v0.1.svg",
+      "configuracao_reconstrucao": "data/reconstructions/asterismos-v0.1.json"
+    },
+    {
+      "slug": "ema",
+      "nome": "Ema",
+      "variantes": [
+        "Ema Branca",
+        "Wiranu",
+        "Guirá Nhandu"
+      ],
+      "povos_associados": [
+        "Guarani"
+      ],
+      "regioes": [
+        "Sul do Brasil",
+        "Norte do Brasil"
+      ],
+      "idiomas": [
+        "Guarani"
+      ],
+      "descricao_cultural": "A Ema é formada também pelas manchas claras e escuras da Via Láctea. Na narrativa apresentada, aproxima-se de dois ovos de pássaro. Seu aparecimento completo é associado ao início do inverno no Sul e ao início da estação seca no Norte.",
+      "relacao_sazonal": "Início do inverno no Sul; início da estação seca no Norte; segunda quinzena de junho na fonte secundária.",
+      "regiao_astronomica_ocidental": [
+        "Cruzeiro do Sul",
+        "Escorpião",
+        "Via Láctea"
+      ],
+      "estrelas": [],
+      "linhas": [],
+      "tipo_de_representacao": "skyculture_com_constelacao_escura",
+      "status_revisao": "aguarda_revisao_com_yaci",
+      "fontes": [
+        "F-ASTROPOVOS",
+        "F-RECIMA21",
+        "F-AFONSO-2013",
+        "F-LIMA-MOREIRA-2005"
+      ],
+      "notas_de_auditoria": "A Ema é principalmente formada por manchas escuras da Via Láctea. A v0.1 mostra linhas estelares do skyculture; a silhueta final precisa incorporar o Saco de Carvão e a textura da Via Láctea.",
+      "versao_reconstrucao": "ema-v0.1",
+      "arquivo_reconstrucao": "assets/reconstructions/ema/ema-v0.1.svg",
+      "configuracao_reconstrucao": "data/reconstructions/asterismos-v0.1.json"
+    },
+    {
+      "slug": "garca",
+      "nome": "Garça",
+      "variantes": [
+        "Yhé"
+      ],
+      "povos_associados": [
+        "Tukano",
+        "Desana; narrativas Barasana atribuídas separadamente"
+      ],
+      "regioes": [
+        "Médio e Alto Rio Tiquié / Alto Rio Negro"
+      ],
+      "idiomas": [
+        "Tukano e Desana, conforme a fonte citada"
+      ],
+      "descricao_cultural": "Yhé é uma configuração Tukano/Desana situada na região de Cabeleira de Berenice e Virgem. Para os Desana, seu aparecimento em agosto marca o início do ciclo anual. Narrativas Barasana sobre o Rei das Garças devem ser atribuídas separadamente.",
+      "relacao_sazonal": "Ocaso em agosto e setembro; início do ano Desana em agosto; relação com pesca em narrativa Barasana.",
+      "regiao_astronomica_ocidental": [
+        "Virgem",
+        "Cabeleira de Berenice"
+      ],
+      "estrelas": [],
+      "linhas": [],
+      "tipo_de_representacao": "skyculture_etnografica_tukano",
+      "status_revisao": "aguarda_revisao_com_yaci",
+      "fontes": [
+        "F-ASTROPOVOS",
+        "F-RECIMA21",
+        "F-DESANO-2019",
+        "F-CARDOSO-2020",
+        "F-HUGH-JONES-2017"
+      ],
+      "notas_de_auditoria": "Pamuri mahsã significa Gente da Transformação e não deve ser apresentado como etnia. A posição da Yhé entre Cabeleira de Berenice e Corvo é discutida; o skyculture adota a primeira com base em São José II.",
+      "versao_reconstrucao": "garca-v0.1",
+      "arquivo_reconstrucao": "assets/reconstructions/garca/garca-v0.1.svg",
+      "configuracao_reconstrucao": "data/reconstructions/asterismos-v0.1.json"
+    },
+    {
+      "slug": "cobra-jararaca",
+      "nome": "Cobra/Jararaca",
+      "variantes": [
+        "Aña"
+      ],
+      "povos_associados": [
+        "Tukano"
+      ],
+      "regioes": [
+        "Norte do Brasil"
+      ],
+      "idiomas": [
+        "Tukano"
+      ],
+      "descricao_cultural": "A Cobra ou Jararaca é associada ao período das chuvas e às cheias dos rios, quando jararacas podem se aproximar das aldeias. A fonte descreve partes do animal, incluindo cabeça, bolsa de veneno, corpo e rabo.",
+      "relacao_sazonal": "Chuvas e cheias dos rios.",
+      "regiao_astronomica_ocidental": [
+        "Escorpião",
+        "Sagitário",
+        "Coroa Austral"
+      ],
+      "estrelas": [
+        "Antares: bolsa de veneno em Cardoso; cabeça no artigo-base — divergência aberta"
+      ],
+      "linhas": [],
+      "tipo_de_representacao": "skyculture_etnografica_tukano_segmentada",
+      "status_revisao": "aguarda_revisao_com_yaci",
+      "fontes": [
+        "F-ASTROPOVOS",
+        "F-RECIMA21",
+        "F-AFONSO-2009"
+      ],
+      "notas_de_auditoria": "Mboi é forma Tupi-Guarani e foi removida como variante Tukano. A v0.1 usa a Aña de Cardoso/Stellarium. Antares permanece ponto de revisão com Yaci.",
+      "versao_reconstrucao": "cobra-jararaca-v0.1",
+      "arquivo_reconstrucao": "assets/reconstructions/cobra-jararaca/cobra-jararaca-v0.1.svg",
+      "configuracao_reconstrucao": "data/reconstructions/asterismos-v0.1.json"
+    },
+    {
+      "slug": "homem-velho",
+      "nome": "Homem Velho",
+      "variantes": [
+        "Tuivaé",
+        "Tuya",
+        "Tuivae"
+      ],
+      "povos_associados": [
+        "Tupinambá do Maranhão — registro histórico de D’Abbeville",
+        "Guarani — reconstrução contemporânea de Germano Afonso"
+      ],
+      "regioes": [
+        "Maranhão no registro histórico",
+        "Sul e outras regiões do Brasil nas sínteses contemporâneas"
+      ],
+      "idiomas": [
+        "Tupi antigo no registro histórico",
+        "Guarani nas sínteses contemporâneas"
+      ],
+      "descricao_cultural": "D’Abbeville descreveu Tuivaé como muitas estrelas semelhantes a um homem velho segurando um bastão. Na reconstrução de Germano Afonso, a figura reúne Touro e Órion e contém as Plêiades, as Híades e o Cinturão de Órion.",
+      "relacao_sazonal": "O aparecimento completo no céu oriental ao anoitecer, na segunda quinzena de dezembro, marca o início do verão no Sul e da estação chuvosa no Norte nas fontes consultadas.",
+      "regiao_astronomica_ocidental": [
+        "Touro",
+        "Órion",
+        "Plêiades",
+        "Híades"
+      ],
+      "estrelas": [
+        {
+          "hip": 21421,
+          "nome": "Aldebarã",
+          "papel": "cabeça / início do pescoço",
+          "status": "documentada"
+        },
+        {
+          "hip": 24436,
+          "nome": "Rigel",
+          "papel": "extremidade do bastão",
+          "status": "documentada"
+        },
+        {
+          "hip": 25336,
+          "nome": "Bellatrix",
+          "papel": "virilha",
+          "status": "documentada"
+        },
+        {
+          "hip": 27989,
+          "nome": "Betelgeuse",
+          "papel": "lugar da perna cortada",
+          "status": "documentada"
+        },
+        {
+          "hip": 27366,
+          "nome": "Saiph",
+          "papel": "pé da perna sadia",
+          "status": "documentada"
+        }
+      ],
+      "linhas": [],
+      "tipo_de_representacao": "skyculture_reconstrucao_contemporanea_com_registro_historico",
+      "versao_reconstrucao": "homem-velho-v0.1",
+      "arquivo_reconstrucao": "assets/reconstructions/homem-velho/homem-velho-v0.1.svg",
+      "configuracao_reconstrucao": "data/reconstructions/asterismos-v0.1.json",
+      "status_revisao": "aguarda_revisao_com_yaci",
+      "fontes": [
+        "F-AFONSO-2013",
+        "F-LIMA-MOREIRA-2005"
+      ],
+      "notas_de_auditoria": "O traçado usa 22 estrelas em 15 trajetos do skyculture Tupi-Guarani do Stellarium, baseado em Germano Afonso. O registro de D’Abbeville documenta a figura geral, não a lista moderna completa de estrelas."
+    },
+    {
+      "slug": "vespeiro-colmeia",
+      "nome": "Vespeiro/Colmeia",
+      "variantes": [
+        "Eixu",
+        "Seichu",
+        "Plêiades"
+      ],
+      "povos_associados": [
+        "Tupinambá do Maranhão — Seichu, registro histórico",
+        "Guarani — Eixu, sínteses contemporâneas"
+      ],
+      "regioes": [
+        "Maranhão no registro histórico; tradições Guarani em outras regiões"
+      ],
+      "idiomas": [
+        "Tupi",
+        "Guarani"
+      ],
+      "descricao_cultural": "O agrupamento conhecido na astronomia ocidental como Plêiades recebe nomes associados a colmeia ou vespeiro. Sua aparição é relacionada à chegada das chuvas e à marcação de um novo ciclo anual.",
+      "relacao_sazonal": "Chegada das chuvas e início de novo ciclo anual; detalhes de época variam conforme a fonte.",
+      "regiao_astronomica_ocidental": [
+        "Touro",
+        "Plêiades"
+      ],
+      "estrelas": [],
+      "linhas": [],
+      "tipo_de_representacao": "aglomerado_estelar_sem_contorno_inventado",
+      "status_revisao": "aguarda_revisao_com_yaci",
+      "fontes": [
+        "F-ASTROPOVOS",
+        "F-RECIMA21",
+        "F-AFONSO-2013"
+      ],
+      "notas_de_auditoria": "D’Abbeville registra nove estrelas em grelha; sínteses Guarani usam sete estrelas visíveis. A v0.1 apresenta apenas o aglomerado M45 e mantém as duas leituras separadas.",
+      "versao_reconstrucao": "vespeiro-colmeia-v0.1",
+      "arquivo_reconstrucao": "assets/reconstructions/vespeiro-colmeia/vespeiro-colmeia-v0.1.svg",
+      "configuracao_reconstrucao": "data/reconstructions/asterismos-v0.1.json"
+    },
+    {
+      "slug": "canoa-tembe",
+      "nome": "Canoa Tembé",
+      "variantes": [
+        "Canoa"
+      ],
+      "povos_associados": [
+        "Tembé — Canoa",
+        "Pescadores de Vigia, Pará — Barco; a legenda de Afonso o associa aos Tupinambá"
+      ],
+      "regioes": [
+        "Fronteira Pará–Maranhão — Canoa Tembé",
+        "Vigia, Pará — Barco dos pescadores"
+      ],
+      "idiomas": [
+        "Nome indígena específico não informado na fonte consultada"
+      ],
+      "descricao_cultural": "A Canoa Tembé é formada por cinco estrelas da Ursa Maior e indica o ponto cardeal norte quando aparece paralela ao horizonte. A extensão Barco de Vigia permanece registrada como contexto comparativo, mas não integra esta carta.",
+      "relacao_sazonal": "Uso documentado para orientação espacial, não para marcar uma estação específica.",
+      "regiao_astronomica_ocidental": [
+        "Ursa Maior",
+        "Canes Venatici"
+      ],
+      "estrelas": [
+        {
+          "hip": 58001,
+          "nome": "Phecda",
+          "papel": "Canoa; referência do norte quando paralela ao horizonte",
+          "status": "documentada"
+        },
+        {
+          "hip": 59774,
+          "nome": "Megrez",
+          "papel": "Canoa",
+          "status": "documentada"
+        },
+        {
+          "hip": 62956,
+          "nome": "Alioth",
+          "papel": "Canoa",
+          "status": "documentada"
+        },
+        {
+          "hip": 65378,
+          "nome": "Mizar",
+          "papel": "Canoa",
+          "status": "documentada"
+        },
+        {
+          "hip": 67301,
+          "nome": "Alkaid",
+          "papel": "Canoa",
+          "status": "documentada"
+        },
+        {
+          "hip": 63125,
+          "nome": "Cor Caroli",
+          "papel": "referência da extensão Barco; não exibida nesta carta",
+          "status": "documentada_para_a_extensao_barco"
+        }
+      ],
+      "linhas": [
+        {
+          "camada": "canoa_tembe",
+          "hip": [58001, 59774, 62956, 65378, 67301]
+        }
+      ],
+      "tipo_de_representacao": "linhas_documentadas",
+      "versao_reconstrucao": "canoa-tembe-v0.1",
+      "arquivo_reconstrucao": "assets/reconstructions/canoa-tembe/canoa-tembe-v0.1.svg",
+      "configuracao_reconstrucao": "data/reconstructions/asterismos-v0.1.json",
+      "status_revisao": "aguarda_revisao_com_yaci",
+      "fontes": [
+        "F-AFONSO-AFRO-INDIGENA"
+      ],
+      "notas_de_auditoria": "A Canoa possui mapeamento explícito de cinco estrelas. A extensão Barco acrescenta Cor Caroli, mastro e vela, mas foi retirada da carta por decisão editorial. A atribuição do Barco permanece cautelosa: o texto relata pescadores de Vigia; a legenda usa Tupinambá."
+    }
+  ],
+  "fontes": [
+    {
+      "id": "F-AFONSO-2012",
+      "tipo": "referencia_auditada",
+      "referencia": "Afonso, Germano Bruno. Saberes astronômicos dos Tupinambás do Maranhão. 64ª Reunião Anual da SBPC, 2012.",
+      "url": "https://www.sbpcnet.org.br/livro/64ra/pdfs/arq_1506_96.pdf",
+      "arquivo": "materials/sources/tinguacu/afonso-2012-saberes-tupinambas.pdf",
+      "status": "auditada_2026-09-21"
+    },
+    {
+      "id": "F-ASTROPOVOS",
+      "tipo": "material_de_apoio",
+      "referencia": "ASTROPOVOS_Site.pdf",
+      "arquivo": "materials/ASTROPOVOS_Site.pdf",
+      "status": "fornecida_pela_equipe"
+    },
+    {
+      "id": "F-RECIMA21",
+      "tipo": "artigo_base",
+      "referencia": "Gonçalves, Amanda Hellen Sales; Dias, Bruno Leonardo do Nascimento; Silva, Francielle Maria Antonio. Etnoastronomia e astrobiologia cultural: iconografia zoomórfica das constelações indígenas brasileiras. RECIMA21, 2021.",
+      "url": "https://recima21.com.br/recima21/pt_BR/article/view/125/127",
+      "status": "consultada"
+    },
+    {
+      "id": "F-AFONSO-2009",
+      "tipo": "referencia_citada",
+      "referencia": "Afonso, Germano Bruno. Astronomia indígena. Reunião anual da SBPC, 2009.",
+      "status": "citada_no_artigo_ainda_nao_auditada"
+    },
+    {
+      "id": "F-AFONSO-2013",
+      "tipo": "referencia_auditada",
+      "referencia": "Afonso, Germano Bruno. As constelações indígenas brasileiras. Telescópios na Escola, 2013.",
+      "status": "auditada_2026-09-21",
+      "arquivo": "materials/sources/asterismos/afonso-constelacoes-indigenas.pdf"
+    },
+    {
+      "id": "F-CARDOSO-2020",
+      "tipo": "referencia_citada",
+      "referencia": "Cardoso, Walmir Thomazi. Constelações, enchentes, verões e invernos no Alto Rio Negro. 2020.",
+      "status": "citada_no_artigo_ainda_nao_auditada"
+    },
+    {
+      "id": "F-DESANO-2019",
+      "tipo": "referencia_citada",
+      "referencia": "Desano, Jaime Diakara. Wame: Gaapi, a bebida cósmica dos Desana. 2019.",
+      "status": "citada_no_artigo_ainda_nao_auditada"
+    },
+    {
+      "id": "F-FAULHABER-2004",
+      "tipo": "referencia_citada",
+      "referencia": "Faulhaber, Priscila. As estrelas eram terrenas: antropologia do clima, da iconografia e das constelações Ticuna. 2004.",
+      "status": "citada_no_artigo_ainda_nao_auditada"
+    },
+    {
+      "id": "F-FONSECA-2007",
+      "tipo": "referencia_citada",
+      "referencia": "Fonseca, Omar Martins; Pinto, Simone Pinheiro; Jurberg, Claudia. Mitos e constelações indígenas, confeccionando um planetário de mão. 2007.",
+      "status": "citada_no_artigo_ainda_nao_auditada"
+    },
+    {
+      "id": "F-HUGH-JONES-2017",
+      "tipo": "referencia_citada",
+      "referencia": "Hugh-Jones, Stephen. As Plêiades e Escorpião na Cosmologia Barasana. 2017.",
+      "status": "citada_no_artigo_ainda_nao_auditada"
+    },
+    {
+      "id": "F-LIMA-MOREIRA-2005",
+      "tipo": "referencia_citada",
+      "referencia": "Lima, Flávia Pedroza; Moreira, I. C. Tradições astronômicas tupinambás na visão de Claude D’Abbeville. 2005.",
+      "status": "citada_no_artigo_ainda_nao_auditada"
+    },
+    {
+      "id": "F-SAUNDERS-1998",
+      "tipo": "referencia_citada",
+      "referencia": "Saunders, Nicholas (org.). Icons of power: feline symbolism in the Americas. 1998.",
+      "status": "citada_no_artigo_ainda_nao_auditada"
+    },
+    {
+      "id": "F-AFONSO-AFRO-INDIGENA",
+      "tipo": "referencia_auditada",
+      "referencia": "Afonso, Germano Bruno. A etnoastronomia afro-indígena-brasileira. Scientific American Brasil, Especial Etnoastronomia.",
+      "arquivo": "materials/sources/asterismos/afonso-etnoastronomia-afro-indigena.pdf",
+      "sha256": "48ac171ee83b29afd19cc961502e27b0f870688898c44ae1ab2cadb8f404e28d",
+      "status": "auditada_2026-09-21"
+    }
+  ]
+}

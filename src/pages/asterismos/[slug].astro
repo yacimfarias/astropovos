@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { asterismos, getAsterismo } from '../../data/asterismos';
+import { asterismoContent } from '../../data/content';
+import { animatedSvgs } from '../../data/animatedSvgs';
+export function getStaticPaths() {
+  return asterismos.map((item) => ({ params: { slug: item.slug }, props: { item } }));
+}
+const { item: fromProps } = Astro.props;
+const item = fromProps ?? getAsterismo(Astro.params.slug ?? '');
+if (!item) throw new Error('Asterismo não encontrado');
+const content = asterismoContent[item.slug];
+const isAnimatedPage = Boolean(animatedSvgs[item.slug]);
+const animatedSvg = animatedSvgs[item.slug] ?? '';
+const chartId = `${item.slug}-svg`;
+const tooltipId = `${item.slug}-star-tooltip`;
+const infoId = `${item.slug}-info`;
+---
+<BaseLayout title={item.nome} description={item.descricao_cultural}>
+  {isAnimatedPage ? <div class="animated-page">
+    <a class="back-link" href="/astropovos/asterismos/">← Asterismos</a>
+    <section class="animated-chart-panel" aria-labelledby="animated-chart-title">
+      <header class="animated-chart-header">
+        <div><p class="eyebrow">Carta interativa</p><h1 id="animated-chart-title">{item.nome}</h1></div>
+        <div class="chart-controls" aria-label="Controles da carta">
+          <button type="button" data-rotate="-15">↶ 15°</button>
+          <button type="button" data-rotate="15">↷ 15°</button>
+          <button type="button" data-zoom="-0.2">− Zoom</button>
+          <button type="button" data-zoom="0.2">+ Zoom</button>
+          <button type="button" data-fullscreen>Tela cheia</button>
+          <button type="button" data-reset-rotation>Restaurar</button>
+          <button type="button" class="info-button" data-open-info>Informações</button>
+        </div>
+      </header>
+      <p class="chart-instruction">Passe o cursor ou use Tab sobre as estrelas destacadas. Depois do zoom, arraste a carta diretamente com o mouse ou o toque.</p>
+      <div class="animated-svg-viewport">
+        <div class="animated-svg" id={chartId} data-animated-svg set:html={animatedSvg}></div>
+        <div id={tooltipId} class="star-tooltip" role="tooltip" hidden></div>
+      </div>
+    </section>
+    <dialog class="asterism-info-dialog" id={infoId} aria-labelledby={`${item.slug}-info-title`}>
+      <button class="dialog-close" type="button" aria-label="Fechar informações" data-close-info>×</button>
+      <p class="eyebrow">Sobre este asterismo</p><h2 id={`${item.slug}-info-title`}>{item.nome}</h2>
+      {content ? <><p>{content.lead}</p>{content.paragraphs.map((paragraph) => <p>{paragraph}</p>)}</> : <p>{item.descricao_cultural}</p>}
+      <h3>Contexto</h3><p class="meta">{item.povos_associados?.join(' · ')}</p>
+      <h3>Fontes</h3><p class="meta">{content?.sourceNote ?? item.fontes?.join(' · ')}</p>
+      <p class="note">As estrelas destacadas usam identificadores HIP do catálogo Hipparcos. A carta apresenta uma reconstrução interpretativa baseada nas fontes indicadas.</p>
+    </dialog>
+  </div> : <div class="detail-layout">
+    <section>
+      <p class="eyebrow">{item.tipo_de_representacao}</p>
+      <h1>{item.nome}</h1>
+      <div class="map-wrap"><img src={`/astropovos/${item.arquivo_reconstrucao}`} alt={`Carta celeste do asterismo ${item.nome}`} /></div>
+    </section>
+    <aside class="panel">
+      <p class="tag">{item.status_revisao}</p>
+      <h2>Sobre este asterismo</h2>
+      {content ? <>
+        <p>{content.lead}</p>
+        {content.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </> : <p>{item.descricao_cultural}</p>}
+      <h3>Contexto</h3>
+      <p class="meta">{item.povos_associados?.join(' · ')}</p>
+      <h3>Região de referência</h3>
+      <p class="meta">{item.regiao_astronomica_ocidental?.join(' · ')}</p>
+      <h3>Fontes</h3>
+      <p class="meta">{item.fontes?.join(' · ')}</p>
+      <p class="note">{content?.sourceNote ?? 'Esta carta distingue dados astronômicos de interpretação gráfica.'}</p>
+    </aside>
+  </div>}
+</BaseLayout>
+
+{isAnimatedPage && <script>
+  const animatedSvg = document.querySelector('[data-animated-svg]');
+  const tooltip = document.querySelector('[role="tooltip"]');
+  const info = document.querySelector('.asterism-info-dialog');
+  const showTooltip = (star: Element) => {
+    if (!(star instanceof SVGCircleElement) || !(tooltip instanceof HTMLElement)) return;
+    const name = star.dataset.starName ?? star.dataset.starId ?? 'Estrela';
+    tooltip.textContent = name;
+    tooltip.hidden = false;
+    const rect = star.getBoundingClientRect();
+    const left = Math.min(window.innerWidth - tooltip.offsetWidth - 12, Math.max(12, rect.left + rect.width / 2 - tooltip.offsetWidth / 2));
+    const top = Math.max(12, rect.top - tooltip.offsetHeight - 10);
+    tooltip.style.left = `${left}px`;
+    tooltip.style.top = `${top}px`;
+  };
+  const hideTooltip = () => { if (tooltip instanceof HTMLElement) tooltip.hidden = true; };
+  animatedSvg?.querySelectorAll('.star--interactive').forEach((star) => {
+    if (!(star instanceof SVGCircleElement)) return;
+    star.setAttribute('aria-describedby', 'cervo-star-tooltip');
+    star.addEventListener('pointerenter', () => showTooltip(star));
+    star.addEventListener('pointerleave', hideTooltip);
+    star.addEventListener('focus', () => showTooltip(star));
+    star.addEventListener('blur', hideTooltip);
+    star.addEventListener('click', () => showTooltip(star));
+  });
+  document.querySelectorAll('[data-rotate]').forEach((button) => button.addEventListener('click', () => {
+    if (!(animatedSvg instanceof HTMLElement)) return;
+    const current = Number(animatedSvg.dataset.rotation ?? '0');
+    animatedSvg.dataset.rotation = String(current + Number(button.getAttribute('data-rotate') ?? '0'));
+    animatedSvg.style.setProperty('--rotation', `${current + Number(button.getAttribute('data-rotate') ?? '0')}deg`);
+  }));
+  document.querySelector('[data-reset-rotation]')?.addEventListener('click', () => {
+    if (!(animatedSvg instanceof HTMLElement)) return;
+    animatedSvg.dataset.rotation = '0';
+    animatedSvg.dataset.zoom = '1';
+    animatedSvg.dataset.panX = '0';
+    animatedSvg.dataset.panY = '0';
+    animatedSvg.style.setProperty('--rotation', '0deg');
+    animatedSvg.style.setProperty('--zoom', '1');
+    animatedSvg.style.setProperty('--pan-x', '0px');
+    animatedSvg.style.setProperty('--pan-y', '0px');
+  });
+  document.querySelectorAll('[data-zoom]').forEach((button) => button.addEventListener('click', () => {
+    if (!(animatedSvg instanceof HTMLElement)) return;
+    const current = Number(animatedSvg.dataset.zoom ?? '1');
+    const next = Math.min(2.5, Math.max(.75, current + Number(button.getAttribute('data-zoom') ?? '0')));
+    animatedSvg.dataset.zoom = String(next);
+    animatedSvg.style.setProperty('--zoom', String(next));
+  }));
+  const viewport = document.querySelector('.animated-svg-viewport');
+  const animatedPage = document.querySelector('.animated-page');
+  let pointerStart: { x: number; y: number; panX: number; panY: number } | null = null;
+  if (viewport instanceof HTMLElement && animatedSvg instanceof HTMLElement) {
+    viewport.addEventListener('pointerdown', (event) => {
+      if (event.button !== 0 && event.pointerType === 'mouse') return;
+      pointerStart = { x: event.clientX, y: event.clientY, panX: Number(animatedSvg.dataset.panX ?? '0'), panY: Number(animatedSvg.dataset.panY ?? '0') };
+      viewport.setPointerCapture(event.pointerId);
+      viewport.classList.add('is-dragging');
+    });
+    viewport.addEventListener('pointermove', (event) => {
+      if (!pointerStart) return;
+      const dx = event.clientX - pointerStart.x;
+      const dy = event.clientY - pointerStart.y;
+      const zoom = Number(animatedSvg.dataset.zoom ?? '1');
+      const maxX = Math.max(0, (zoom - 1) * viewport.clientWidth / 2);
+      const maxY = Math.max(0, (zoom - 1) * viewport.clientHeight / 2);
+      const panX = Math.min(maxX, Math.max(-maxX, pointerStart.panX + dx));
+      const panY = Math.min(maxY, Math.max(-maxY, pointerStart.panY + dy));
+      animatedSvg.dataset.panX = String(panX);
+      animatedSvg.dataset.panY = String(panY);
+      animatedSvg.style.setProperty('--pan-x', `${panX}px`);
+      animatedSvg.style.setProperty('--pan-y', `${panY}px`);
+    });
+    const stopDragging = (event: PointerEvent) => {
+      if (!pointerStart) return;
+      pointerStart = null;
+      viewport.classList.remove('is-dragging');
+      if (viewport.hasPointerCapture(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
+    };
+    viewport.addEventListener('pointerup', stopDragging);
+    viewport.addEventListener('pointercancel', stopDragging);
+  }
+  const fullscreenButton = document.querySelector('[data-fullscreen]');
+  const updateFullscreenButton = () => {
+    if (!(fullscreenButton instanceof HTMLButtonElement)) return;
+    const active = document.fullscreenElement === animatedPage;
+    fullscreenButton.textContent = active ? 'Sair da tela cheia' : 'Tela cheia';
+    fullscreenButton.setAttribute('aria-label', active ? 'Sair da tela cheia' : 'Abrir carta em tela cheia');
+  };
+  if (fullscreenButton instanceof HTMLButtonElement && animatedPage instanceof HTMLElement && document.fullscreenEnabled) {
+    fullscreenButton.addEventListener('click', () => {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else animatedPage.requestFullscreen();
+    });
+    document.addEventListener('fullscreenchange', updateFullscreenButton);
+    updateFullscreenButton();
+  } else if (fullscreenButton instanceof HTMLButtonElement) {
+    fullscreenButton.hidden = true;
+  }
+  const openInfo = document.querySelector('[data-open-info]');
+  const closeInfo = document.querySelector('[data-close-info]');
+  if (info instanceof HTMLDialogElement) {
+    openInfo?.addEventListener('click', () => info.showModal());
+    closeInfo?.addEventListener('click', () => info.close());
+  }
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') hideTooltip(); });
+</script>}

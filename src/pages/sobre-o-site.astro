@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Sobre o site" description="Como o site Astropovos foi desenvolvido">
+  <section class="panel site-about">
+    <p class="eyebrow">Transparência técnica</p>
+    <h1>Sobre o site</h1>
+    <p>O Astropovos é um site estático educacional criado para apresentar asterismos do céu brasileiro associados a conhecimentos, narrativas e referências de povos originários.</p>
+
+    <h2>Como foi desenvolvido</h2>
+    <p>A aplicação foi construída com <strong>Astro</strong>, <strong>TypeScript</strong>, CSS próprio e JavaScript mínimo no navegador. Essa escolha mantém o site leve, responsivo e adequado à publicação em subdiretório.</p>
+    <p>As páginas dos asterismos usam SVG para preservar a resolução das cartas. O gerador em Python produz as reconstruções a partir de dados do catálogo Hipparcos e de configurações documentadas com referências ao Stellarium. As interações de hover, foco, toque, zoom, rotação e arraste são executadas no próprio navegador.</p>
+
+    <h2>Inteligência artificial</h2>
+    <p>O desenvolvimento contou com o <strong>Hermes Agent</strong>, usando a família de modelos <strong>GPT-5.6</strong>, para apoiar pesquisa, organização de fontes, redação técnica, geração e revisão de código, documentação e testes.</p>
+    <p>A inteligência artificial foi utilizada como ferramenta de apoio. As decisões editoriais, a revisão das fontes, a atribuição cultural, a validação das reconstruções e a responsabilidade pelo conteúdo permanecem humanas e dependem da revisão da equipe do projeto.</p>
+
+    <h2>Desenvolvimento</h2>
+    <p><strong>Yaci Farias</strong> é a autora dos textos e responsável pelo projeto. Sofia Bulhões, Rafaella Pimenta, Mabel Miguez e Jade Simas são colaboradoras. <strong>Eric Brasil</strong> é o desenvolvedor do site e dos SVGs. Conheça outros projetos e informações profissionais em <a href="https://ericbrasil.com.br/" target="_blank" rel="noopener noreferrer">ericbrasil.com.br</a>.</p>
+
+
+    <h2>Proveniência e limites</h2>
+    <p>O site distingue fontes históricas e etnográficas, dados astronômicos, reconstruções contemporâneas e decisões de interface. As linhas das cartas não devem ser interpretadas automaticamente como limites tradicionais oficiais. Nomes, povos, textos e representações permanecem sujeitos à revisão.</p>
+  </section>
+</BaseLayout>

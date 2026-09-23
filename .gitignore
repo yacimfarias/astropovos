@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+.astro/
+dist/
+
+# local environment
+.env
+.env.*
+!.env.example
+
+# generated files
+coverage/
+.tmp/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
