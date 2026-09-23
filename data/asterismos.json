@@ -410,69 +410,56 @@
     {
       "id": "F-AFONSO-2012",
       "tipo": "referencia_auditada",
-      "referencia": "Afonso, Germano Bruno. Saberes astronômicos dos Tupinambás do Maranhão. 64ª Reunião Anual da SBPC, 2012.",
       "url": "https://www.sbpcnet.org.br/livro/64ra/pdfs/arq_1506_96.pdf"
     },
     {
       "id": "F-ASTROPOVOS",
-      "tipo": "material_de_apoio",
-      "referencia": "ASTROPOVOS_Site.pdf"
+      "tipo": "material_de_apoio"
     },
     {
       "id": "F-RECIMA21",
       "tipo": "artigo_base",
-      "referencia": "Gonçalves, Amanda Hellen Sales; Dias, Bruno Leonardo do Nascimento; Silva, Francielle Maria Antonio. Etnoastronomia e astrobiologia cultural: iconografia zoomórfica das constelações indígenas brasileiras. RECIMA21, 2021.",
       "url": "https://recima21.com.br/recima21/pt_BR/article/view/125/127"
     },
     {
       "id": "F-AFONSO-2009",
-      "tipo": "referencia_citada",
-      "referencia": "Afonso, Germano Bruno. Astronomia indígena. Reunião anual da SBPC, 2009."
+      "tipo": "referencia_citada"
     },
     {
       "id": "F-AFONSO-2013",
-      "tipo": "referencia_auditada",
-      "referencia": "Afonso, Germano Bruno. As constelações indígenas brasileiras. Telescópios na Escola, 2013."
+      "tipo": "referencia_auditada"
     },
     {
       "id": "F-CARDOSO-2020",
-      "tipo": "referencia_citada",
-      "referencia": "Cardoso, Walmir Thomazi. Constelações, enchentes, verões e invernos no Alto Rio Negro. 2020."
+      "tipo": "referencia_citada"
     },
     {
       "id": "F-DESANO-2019",
-      "tipo": "referencia_citada",
-      "referencia": "Desano, Jaime Diakara. Wame: Gaapi, a bebida cósmica dos Desana. 2019."
+      "tipo": "referencia_citada"
     },
     {
       "id": "F-FAULHABER-2004",
-      "tipo": "referencia_citada",
-      "referencia": "Faulhaber, Priscila. As estrelas eram terrenas: antropologia do clima, da iconografia e das constelações Ticuna. 2004."
+      "tipo": "referencia_citada"
     },
     {
       "id": "F-FONSECA-2007",
-      "tipo": "referencia_citada",
-      "referencia": "Fonseca, Omar Martins; Pinto, Simone Pinheiro; Jurberg, Claudia. Mitos e constelações indígenas, confeccionando um planetário de mão. 2007."
+      "tipo": "referencia_citada"
     },
     {
       "id": "F-HUGH-JONES-2017",
-      "tipo": "referencia_citada",
-      "referencia": "Hugh-Jones, Stephen. As Plêiades e Escorpião na Cosmologia Barasana. 2017."
+      "tipo": "referencia_citada"
     },
     {
       "id": "F-LIMA-MOREIRA-2005",
-      "tipo": "referencia_citada",
-      "referencia": "Lima, Flávia Pedroza; Moreira, I. C. Tradições astronômicas tupinambás na visão de Claude D’Abbeville. 2005."
+      "tipo": "referencia_citada"
     },
     {
       "id": "F-SAUNDERS-1998",
-      "tipo": "referencia_citada",
-      "referencia": "Saunders, Nicholas (org.). Icons of power: feline symbolism in the Americas. 1998."
+      "tipo": "referencia_citada"
     },
     {
       "id": "F-AFONSO-AFRO-INDIGENA",
       "tipo": "referencia_auditada",
-      "referencia": "Afonso, Germano Bruno. A etnoastronomia afro-indígena-brasileira. Scientific American Brasil, Especial Etnoastronomia.",
       "sha256": "48ac171ee83b29afd19cc961502e27b0f870688898c44ae1ab2cadb8f404e28d"
     }
   ]

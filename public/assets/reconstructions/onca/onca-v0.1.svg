@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
 <title id="title">Onça — Yai — reconstrução v0.1</title>
-<desc id="desc">Carta Hipparcos preliminar para revisão. Tradição Tukano do médio Tiquié; não confundir com a Onça Ai dos Ticuna no Escorpião.</desc>
+<desc id="desc">Carta celeste baseada no catálogo Hipparcos. Tradição Tukano do médio Tiquié; não confundir com a Onça Ai dos Ticuna no Escorpião.</desc>
 <style>
 .bg{fill:#071426} .frame{fill:none;stroke:#2f6b57;stroke-width:1.2} .grid{stroke:#173b46;stroke-width:1;stroke-dasharray:4 8}
 .axis{fill:#d8ceb9;font:13px system-ui,sans-serif} .title{fill:#f2e8d2;font:700 27px system-ui,sans-serif}
