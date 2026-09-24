@@ -1,8 +1,9 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://ericbrasil.com.br',
+  site: 'https://yacimfarias.github.io',
   base: '/astropovos',
+  output: 'static',
   build: {
     format: 'directory'
   }
