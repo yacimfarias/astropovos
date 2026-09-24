@@ -10,7 +10,7 @@ Site educativo sobre asterismos do céu brasileiro, desenvolvido a partir de con
 
 ## Publicação local
 
-Requisitos: Node.js 20 ou superior.
+Requisitos: Node.js 22.14 ou superior.
 
 ```bash
 npm install
