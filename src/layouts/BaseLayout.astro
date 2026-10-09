@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 const { title = 'Astropovos', description = 'Asterismos do céu brasileiro', home = false } = Astro.props;
-const base = Astro.site?.pathname ? '/astropovos' : '/astropovos';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <!doctype html>
 <html lang="pt-BR">

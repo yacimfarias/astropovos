@@ -18,7 +18,7 @@ npm run build
 npm run preview
 ```
 
-O site é gerado em `dist/` e usa a base `/astropovos/`. Para publicar em outro subdiretório, ajuste `base` em `astro.config.mjs`.
+O site é gerado em `dist/` e usa a raiz do domínio `https://astropovos.com.br/`. Para publicar em outro subdiretório, ajuste `base` em `astro.config.mjs`.
 
 ## Conteúdo
 
