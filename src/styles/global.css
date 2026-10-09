@@ -53,9 +53,6 @@ button { font: inherit; }
 .site-nav a { display: block; width: 100%; padding: .7rem .5rem; border-bottom: 2px solid var(--black); text-decoration: none; font-family: Georgia, serif; font-size: 1.25rem; font-weight: 700; white-space: normal; overflow-wrap: break-word; }
 .site-nav a:hover { color: var(--ocre-solar); }
 .site-nav .tag { display: inline-block; margin-left: .25rem; padding: .12rem .3rem; border: 2px solid var(--palha); background: var(--verde-mata); color: var(--palha); box-shadow: none; font-family: system-ui, sans-serif; font-size: .65rem; }
-.beta-banner { display: flex; align-items: center; justify-content: center; gap: .9rem; margin: 1rem 0 0; padding: .65rem 1rem; border: 3px solid var(--carvao); background: var(--azul-jenipapo); color: var(--palha); box-shadow: 5px 5px 0 var(--carvao); font-size: .88rem; }
-.beta-banner strong { color: var(--ocre-solar); text-transform: uppercase; letter-spacing: .08em; white-space: nowrap; }
-.beta-banner span { font-family: Georgia, serif; }
 main { padding-bottom: 4rem; }
 .home-body { --ink: var(--palha); --muted: #d8ceb9; --deep: var(--ceu-profundo); --panel: var(--palha); --line: var(--palha); --accent: var(--verde-estrela); --warm: var(--urucum); --black: var(--carvao); --eyebrow-color: var(--ocre-solar); background: var(--deep) url('/astropovos/images/astropovos-hero-sky.png') center / cover fixed no-repeat; }
 .home-body .site-shell { min-height: 100svh; background: rgba(7,20,38,.08); }
@@ -93,11 +90,7 @@ main { padding-bottom: 4rem; }
 .site-footer { border-top: 1px solid var(--line); color: var(--muted); padding: 2rem 0; font-size: .9rem; }
 .site-footer a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
 .site-footer a:hover, .site-footer a:focus-visible { color: var(--ocre-solar); }
-:root[data-theme='light'] .beta-banner { background: var(--palha); color: var(--carvao); border-color: var(--carvao); box-shadow: 5px 5px 0 var(--carvao); }
-:root[data-theme='light'] .beta-banner strong { color: var(--urucum-escuro); }
-.home-body .beta-banner { position: absolute; z-index: 4; top: 5.5rem; left: 1rem; right: 1rem; margin: 0; }
-.home-body .beta-banner { background: var(--azul-jenipapo); color: var(--palha); border-color: var(--carvao); }
-.home-body .beta-banner strong { color: var(--ocre-solar); }
+.beta-note { color: var(--muted); font-size: .86em; }
 :root[data-theme='light'] .panel, :root[data-theme='light'] .card { background: rgba(242,232,210,.92); }
 :root[data-theme='light'] .site-nav { background: var(--palha); color: var(--carvao); }
 :root[data-theme='light'] .site-nav .tag { border-color: var(--carvao); color: var(--palha); }
