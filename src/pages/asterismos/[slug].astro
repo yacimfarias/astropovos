@@ -153,6 +153,10 @@ const infoId = `${item.slug}-info`;
     viewport.addEventListener('pointercancel', stopDragging);
   }
   const fullscreenButton = document.querySelector('[data-fullscreen]');
+  let themeBeforeFullscreen: 'light' | 'dark' | null = null;
+  const requestTheme = (theme: 'light' | 'dark') => {
+    window.dispatchEvent(new CustomEvent('astropovos-theme-change', { detail: { theme } }));
+  };
   const updateFullscreenButton = () => {
     if (!(fullscreenButton instanceof HTMLButtonElement)) return;
     const active = document.fullscreenElement === animatedPage;
@@ -164,7 +168,17 @@ const infoId = `${item.slug}-info`;
       if (document.fullscreenElement) document.exitFullscreen();
       else animatedPage.requestFullscreen();
     });
-    document.addEventListener('fullscreenchange', updateFullscreenButton);
+    document.addEventListener('fullscreenchange', () => {
+      const active = document.fullscreenElement === animatedPage;
+      if (active) {
+        themeBeforeFullscreen = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
+        requestTheme('dark');
+      } else if (themeBeforeFullscreen) {
+        requestTheme(themeBeforeFullscreen);
+        themeBeforeFullscreen = null;
+      }
+      updateFullscreenButton();
+    });
     updateFullscreenButton();
   } else if (fullscreenButton instanceof HTMLButtonElement) {
     fullscreenButton.hidden = true;

@@ -40,8 +40,9 @@ const base = Astro.site?.pathname ? '/astropovos' : '/astropovos';
           <a href={`${base}/creditos/`}>Créditos</a>
           <a href={`${base}/professores/`}>Para professores <span class="tag">Em breve</span></a>
         </nav>
+        <aside class="beta-banner" role="note" aria-label="Aviso sobre a versão do site"><strong>Versão beta</strong><span>O Astropovos está em desenvolvimento. Envie sugestões e problemas pelo repositório do projeto.</span></aside>
         <main><slot /></main>
-        <footer class="site-footer"><strong>Astropovos</strong> · Yaci Farias (autora) · Eric Brasil (desenvolvedor) · Textos, imagens e SVGs: CC BY-NC 4.0 · Código: PolyForm Noncommercial 1.0.0.</footer>
+        <footer class="site-footer"><strong>Astropovos</strong> · <a href="mailto:yacimfarias@gmail.com">Yaci Farias (autora)</a> · <a href="https://ericbrasil.com.br/" target="_blank" rel="noopener noreferrer">Eric Brasil (desenvolvedor)</a> · <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.pt-br" target="_blank" rel="noreferrer">CC BY-NC 4.0</a> · <a href="https://polyformproject.org/licenses/noncommercial/1.0.0/" target="_blank" rel="noreferrer">PolyForm Noncommercial 1.0.0</a>.</footer>
       </div>
     </div>
     <script>
@@ -72,6 +73,13 @@ const base = Astro.site?.pathname ? '/astropovos' : '/astropovos';
       if (themeToggle instanceof HTMLButtonElement) {
         let current: 'light' | 'dark' = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark';
         setTheme(current);
+        window.addEventListener('astropovos-theme-change', (event) => {
+          const requested = (event as CustomEvent<{ theme?: string }>).detail?.theme;
+          if (requested === 'light' || requested === 'dark') {
+            current = requested;
+            setTheme(current);
+          }
+        });
         themeToggle.addEventListener('click', () => {
           current = current === 'dark' ? 'light' : 'dark';
           setTheme(current);

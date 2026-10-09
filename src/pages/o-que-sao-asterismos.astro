@@ -3,5 +3,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { menuContent } from '../data/content';
 ---
 <BaseLayout title="O que são asterismos?" description="Conceito de asterismo no Astropovos">
-  <section class="panel page-copy"><p class="eyebrow">Conceito</p><h1>{menuContent.oQueSao.title}</h1>{menuContent.oQueSao.paragraphs.map((paragraph) => <p>{paragraph}</p>)}</section>
+  <section class="panel page-copy"><p class="eyebrow">Conceito</p><h1>{menuContent.oQueSao.title}</h1>{menuContent.oQueSao.paragraphs.map((paragraph) => <p>{paragraph}</p>)}<p class="source-link">Consulte também a <a href="/astropovos/fontes/">página Fontes e método</a>.</p></section>
 </BaseLayout>
