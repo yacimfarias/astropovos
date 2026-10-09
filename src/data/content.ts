@@ -17,8 +17,7 @@ export const menuContent = {
   sobreNos: {
     title: 'Sobre nós',
     paragraphs: [
-      'Os textos e a responsabilidade pelo projeto são de Yaci Farias. As alunas Sofia Bulhões, Rafaella Pimenta, Mabel Miguez e Jade Simas são colaboradoras do projeto e participaram de seu desenvolvimento no âmbito do Clube de Ciências do Colégio Liceu Salesiano do Salvador, nos Anos Finais do Ensino Fundamental.',
-      'O desenvolvimento técnico do site e dos SVGs é realizado por Eric Brasil.',
+      'Os textos e a responsabilidade pelo projeto são de Yaci Farias.',
       'O projeto surgiu a partir da identificação de um problema central: a pouca visibilidade dos asterismos associados aos povos originários e sua presença ainda limitada em materiais educativos e espaços de divulgação científica. A iniciativa busca ampliar o conhecimento sobre esses saberes, valorizar diferentes formas de observação e interpretação do céu e incentivar o estudo dos asterismos presentes nas culturas dos povos originários do Brasil.'
     ]
   }

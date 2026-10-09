@@ -5,8 +5,7 @@ Site educativo sobre asterismos do céu brasileiro, desenvolvido a partir de con
 ## Autoria
 
 - **Yaci Farias** — autora dos textos e responsável pelo projeto.
-- **Sofia Bulhões, Rafaella Pimenta, Mabel Miguez e Jade Simas** — colaboradoras.
-- **Eric Brasil** — desenvolvedor do site e dos SVGs.
+- [**Eric Brasil**](https://ericbrasil.com.br/) — desenvolvedor do site e dos SVGs.
 
 ## Publicação local
 
