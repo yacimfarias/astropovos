@@ -57,13 +57,11 @@ As fontes e os dados de terceiros permanecem sujeitos às licenças de seus pró
 
 ## Citação
 
-Para citar o projeto, consulte [`CITATION.cff`](CITATION.cff). O repositório está preparado para arquivamento no Zenodo e atribuição de DOI após a criação de uma release versionada.
+Para citar o projeto, consulte [`CITATION.cff`](CITATION.cff).
 
 ## Deploy no GitHub Pages
 
 O arquivo `.github/workflows/deploy-pages.yml` compila o projeto com Astro e publica somente o diretório `dist/` no GitHub Pages. O workflow é executado após cada push em `main` ou manualmente pela aba **Actions**.
-
-No repositório, em **Settings → Pages → Build and deployment**, selecione **GitHub Actions** como fonte. Não selecione `Deploy from a branch`, porque essa opção tenta processar os arquivos `.astro` com Jekyll.
 
 Depois do deploy, o site ficará disponível em:
 
