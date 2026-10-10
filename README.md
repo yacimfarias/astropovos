@@ -55,11 +55,13 @@ A página `Fontes e método` reúne as referências bibliográficas, os catálog
 
 As fontes e os dados de terceiros permanecem sujeitos às licenças de seus próprios fornecedores. Consulte as páginas `Créditos` e `Fontes` do site para detalhes.
 
+## Citação
+
+Para citar o projeto, consulte [`CITATION.cff`](CITATION.cff).
+
 ## Deploy no GitHub Pages
 
 O arquivo `.github/workflows/deploy-pages.yml` compila o projeto com Astro e publica somente o diretório `dist/` no GitHub Pages. O workflow é executado após cada push em `main` ou manualmente pela aba **Actions**.
-
-No repositório, em **Settings → Pages → Build and deployment**, selecione **GitHub Actions** como fonte. Não selecione `Deploy from a branch`, porque essa opção tenta processar os arquivos `.astro` com Jekyll.
 
 Depois do deploy, o site ficará disponível em:
 

@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "Se você utilizar o Astropovos, cite este repositório e a versão específica consultada."
+type: software
+title: "Astropovos: asterismos do céu brasileiro"
+version: "0.1.0"
+date-released: 2026-10-09
+abstract: >-
+  Site educativo sobre asterismos do céu brasileiro a partir de conhecimentos,
+  narrativas e referências de povos originários do Brasil. O projeto reúne cartas
+  celestes interativas, textos editoriais, referências bibliográficas e recursos
+  pensados para apoiar a educação básica.
+authors:
+  - family-names: Farias
+    given-names: Yaci
+    affiliation: "Liceu Salesiano de Salvador"
+    contribution: "Conteúdo autoral, revisão cultural e responsabilidade pelo projeto"
+  - family-names: Brasil
+    given-names: Eric
+    affiliation: "UNILAB"
+    contribution: "Desenvolvimento do site, dos SVGs e da interface técnica"
+keywords:
+  - asterismos
+  - astronomia indígena
+  - astronomia cultural
+  - educação básica
+  - povos originários
+  - história da ciência
+  - divulgação científica
+license: PolyForm-Noncommercial-1.0.0
+repository-code: "https://github.com/yacimfarias/astropovos"
+url: "https://astropovos.com.br/"
