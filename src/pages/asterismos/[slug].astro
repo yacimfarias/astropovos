@@ -9,6 +9,7 @@ export function getStaticPaths() {
 const { item: fromProps } = Astro.props;
 const item = fromProps ?? getAsterismo(Astro.params.slug ?? '');
 if (!item) throw new Error('Asterismo não encontrado');
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const content = asterismoContent[item.slug];
 const isAnimatedPage = Boolean(animatedSvgs[item.slug]);
 const animatedSvg = animatedSvgs[item.slug] ?? '';
@@ -18,7 +19,7 @@ const infoId = `${item.slug}-info`;
 ---
 <BaseLayout title={item.nome} description={item.descricao_cultural}>
   {isAnimatedPage ? <div class="animated-page">
-    <a class="back-link" href="/astropovos/asterismos/">← Asterismos</a>
+    <a class="back-link" href={`${base}/asterismos/`}>← Asterismos</a>
     <section class="animated-chart-panel" aria-labelledby="animated-chart-title">
       <header class="animated-chart-header">
         <div><p class="eyebrow">Carta interativa</p><h1 id="animated-chart-title">{item.nome}</h1></div>
@@ -50,7 +51,7 @@ const infoId = `${item.slug}-info`;
     <section>
       <p class="eyebrow">{item.tipo_de_representacao}</p>
       <h1>{item.nome}</h1>
-      <div class="map-wrap"><img src={`/astropovos/${item.arquivo_reconstrucao}`} alt={`Carta celeste do asterismo ${item.nome}`} /></div>
+      <div class="map-wrap"><img src={`${base}/${item.arquivo_reconstrucao}`} alt={`Carta celeste do asterismo ${item.nome}`} /></div>
     </section>
     <aside class="panel">
       <p class="tag">{item.status_revisao}</p>

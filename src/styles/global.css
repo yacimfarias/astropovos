@@ -54,7 +54,7 @@ button { font: inherit; }
 .site-nav a:hover { color: var(--ocre-solar); }
 .site-nav .tag { display: inline-block; margin-left: .25rem; padding: .12rem .3rem; border: 2px solid var(--palha); background: var(--verde-mata); color: var(--palha); box-shadow: none; font-family: system-ui, sans-serif; font-size: .65rem; }
 main { padding-bottom: 4rem; }
-.home-body { --ink: var(--palha); --muted: #d8ceb9; --deep: var(--ceu-profundo); --panel: var(--palha); --line: var(--palha); --accent: var(--verde-estrela); --warm: var(--urucum); --black: var(--carvao); --eyebrow-color: var(--ocre-solar); background: var(--deep) url('/astropovos/images/astropovos-hero-sky.png') center / cover fixed no-repeat; }
+.home-body { --ink: var(--palha); --muted: #d8ceb9; --deep: var(--ceu-profundo); --panel: var(--palha); --line: var(--palha); --accent: var(--verde-estrela); --warm: var(--urucum); --black: var(--carvao); --eyebrow-color: var(--ocre-solar); background: var(--deep) url('/images/astropovos-hero-sky.png') center / cover fixed no-repeat; }
 .home-body .site-shell { min-height: 100svh; background: rgba(7,20,38,.08); }
 .home-body main { min-height: 100svh; padding: 0; }
 .home-body .site-footer { position: fixed; z-index: 3; left: 1rem; right: 1rem; bottom: .85rem; border-top: 0; padding: 0; color: rgba(242,232,210,.82); font-size: .72rem; text-align: center; text-shadow: 1px 1px 0 var(--black); }

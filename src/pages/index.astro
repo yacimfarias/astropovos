@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 <BaseLayout title="Início" description="Astropovos — asterismos do céu brasileiro" home>
   <section class="hero">
@@ -15,6 +16,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="eyebrow">Um convite para olhar de novo</p>
     <h2 id="invite-title">Explore os asterismos</h2>
     <p>Convidamos você a explorar a imensidão do céu brasileiro sob uma perspectiva completamente nova e enriquecedora: a visão ancestral dos povos originários do nosso país, cujos saberes tradicionais trazem um olhar profundo e cheio de significado sobre os astros.</p>
-    <a class="tag" href="/astropovos/asterismos/">Explore os Asterismos</a>
+    <a class="tag" href={`${base}/asterismos/`}>Explore os Asterismos</a>
   </dialog>
 </BaseLayout>
