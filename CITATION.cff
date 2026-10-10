@@ -12,10 +12,11 @@ abstract: >-
 authors:
   - family-names: Farias
     given-names: Yaci
-    affiliation: "Liceu Salesiano do Salvador"
+    affiliation: "Liceu Salesiano de Salvador"
     contribution: "Conteúdo autoral, revisão cultural e responsabilidade pelo projeto"
   - family-names: Brasil
     given-names: Eric
+    affiliation: "UNILAB"
     contribution: "Desenvolvimento do site, dos SVGs e da interface técnica"
 keywords:
   - asterismos
