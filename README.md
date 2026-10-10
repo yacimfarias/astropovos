@@ -1,5 +1,7 @@
 # Astropovos
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23272831.svg)](https://doi.org/10.5281/zenodo.23272831)
+
 Site educativo sobre asterismos do céu brasileiro, desenvolvido a partir de conhecimentos, narrativas e referências de povos originários do Brasil.
 
 ## Autoria
@@ -57,7 +59,9 @@ As fontes e os dados de terceiros permanecem sujeitos às licenças de seus pró
 
 ## Citação
 
-Para citar o projeto, consulte [`CITATION.cff`](CITATION.cff).
+Para citar o projeto, consulte [`CITATION.cff`](CITATION.cff) ou use o DOI da primeira versão arquivada no Zenodo:
+
+> FARIAS, Yaci; BRASIL, Eric. *Astropovos: asterismos do céu brasileiro*. Versão 0.1.0. Zenodo, 2026. DOI: [10.5281/zenodo.23272831](https://doi.org/10.5281/zenodo.23272831).
 
 ## Deploy no GitHub Pages
 
